@@ -1,0 +1,18 @@
+{
+  "name": "hrapp",
+  "version": "1.0.0",
+  "description": "it is a hrApp",
+  "keywords": [
+    "bjk"
+  ],
+  "license": "ISC",
+  "author": "Mert",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mk"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
