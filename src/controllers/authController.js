@@ -1,4 +1,4 @@
-const Admin = require("src/models/admin");
+const Admin = require("../models/admin");
 const jwt = require("jsonwebtoken"); //kullanıcı kimliği tespit eder,frontende gönderir.
 
 const JWT_SECRET = "yourSecretKey";

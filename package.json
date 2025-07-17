@@ -10,9 +10,18 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "mk"
+    "test": "mk",
+    "start": "nodemon src/index.js"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.2",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
   }
 }
