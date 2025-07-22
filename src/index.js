@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const employeeRoutes = require("./routes/employeeRoutes");
+const positionRoutes = require("./routes/positionRoutes");
+const departmentRoutes = require("./routes/departmentRoutes");
 
 const app = express();
 const PORT = 5000;
@@ -20,6 +22,8 @@ mongoose
 
 app.use("/api/auth", authRoutes);
 app.use("/api", employeeRoutes);
+app.use("/api/positions", positionRoutes);
+app.use("/api/departments", departmentRoutes);
 
 app.listen(PORT, () => {
   console.log(`Sunucu ${PORT} portunda çalışıyor`);

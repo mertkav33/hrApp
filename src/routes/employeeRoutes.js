@@ -10,4 +10,14 @@ router.get("/employees", employeeController.getAllEmployees);
 // Tek çalışanı ID ile getir
 router.get("/employees/:id", employeeController.getEmployeeById);
 
+router.post("/", async (req, res) => {
+  try {
+    const newEmployee = new Employee(req.body);
+    const saved = await newEmployee.save();
+    res.status(201).json(saved);
+  } catch (err) {
+    res.status(500).json({ error: "Çalışan eklenemedi", details: err.message });
+  }
+});
+
 module.exports = router;

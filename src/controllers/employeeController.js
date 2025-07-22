@@ -68,10 +68,13 @@ exports.deleteEmployee = async (req, res) => {
 // Tüm çalışanları getir
 exports.getAllEmployees = async (req, res) => {
   try {
-    const employees = await Employee.find(); // Tüm verileri al
-    res.status(200).json(employees); // JSON olarak gönder
+    const employees = await Employee.find()
+      .populate("position", "name")
+      .populate("department", "name");
+
+    res.status(200).json(employees);
   } catch (err) {
-    res.status(500).json({ message: "Sunucu hatası", error: err.message });
+    res.status(500).json({ message: "Veriler alınamadı", error: err.message });
   }
 };
 
